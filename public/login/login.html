@@ -35,8 +35,33 @@
       text-decoration: none;
     }
 
-    /* header */
+    .close {
+      position: absolute;
+      top: 0;
+      right: -45px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+    }
 
+    .close div {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #e64d4d;
+    }
+
+    .close div:first-child {
+      transform: rotate(-45deg);
+    }
+
+    .close div:last-child {
+      transform: rotate(45deg);
+    }
+
+    /* header */
     header>div{
       display: flex;
       justify-content: space-between;
@@ -67,8 +92,7 @@
       overflow: hidden;
     }
 
-    /* login */
-    .login-mode {
+    .modal {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -84,6 +108,11 @@
         0 30px 50px 0 rgba(0,0,0,0.1);
       text-align: center;
       transform: translate(-50%, -60%);
+    }
+
+    /* login */
+    .login-mode {
+      /*display: none;*/
     }
 
     .login--border {
@@ -170,6 +199,21 @@
       transition: color 200ms;
     }
 
+    /* 关于 */
+    .about-mode {
+      display: none;
+      padding: 30px 40px;
+    }
+
+    .about-mode p {
+      margin: .5em 0;
+      color: #fff;
+    }
+
+    .about-mode p:nth-of-type(odd) {
+      color: #7A759F;
+    }
+
     /* 底部 */
 
     footer {
@@ -206,6 +250,11 @@
       height: 32px;
       border-radius: 32px;
       background: rgba(35,34,54,0.5);
+      transition: transform 200ms cubic-bezier(.17,.67,1,2.4);
+    }
+
+    div[class^="cartridge"]:hover div {
+      transform: scale(1.4);
     }
 
     div[class^="cartridge"] span {
@@ -293,23 +342,25 @@
       to {right: 3000px}
     }
   </style>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+
   <header>
     <div>
       <img src="../favicon.ico" alt="">
       <ul>
-        <li><a href="javascript:;">关于弹词</a></li>
+        <li><a class="header--about" href="javascript:;">关于弹词</a></li>
       </ul>
     </div>
   </header>
   <main>
 
     <!-- 登录框-开始 -->
-    <div class="login-mode">
+    <div class="modal login-mode">
       <div class="login--border">
         <img class="login--logo" src="logo.svg" alt="" />
-        <p class="login--slogan"><span>弹词</span>是一款使用<span>弹幕</span>帮助你记单词的APP</p>
+        <p class="login--slogan"><span>弹词</span>，一款用<span>弹幕</span>帮助你记单词的APP</p>
         <span class="login--cut">第三方登录</span>
         <ul class="login--method">
           <li class="login--qq">
@@ -324,6 +375,21 @@
       </div>
     </div>
     <!-- 登录框-结束 -->
+
+    <!-- 关于框-开始 -->
+    <div class="modal about-mode">
+      <div class="close">
+        <div></div>
+        <div></div>
+      </div>
+      <p>作者</p>
+      <p>彭凯</p>
+      <p>邮箱</p>
+      <p>18777215778@163.com</p>
+      <p>声明</p>
+      <p>此网站为本人的练习项目，仅用于学习。如有侵权，请联系我。</p>
+    </div>
+    <!-- 关于框-结束 -->
 
     <!-- 弹幕-开始 -->
     <div class="cartridge-1">
@@ -355,5 +421,18 @@
   <footer>
     <p>桂ICP备18005022号-1</p>
   </footer>
+
+  <script>
+    $('.header--about').on('click', function () {
+      $('.login-mode').hide();
+      $('.about-mode').show();
+    });
+
+    $('.modal .close').on('click', function () {
+      $(this).parent('.modal').hide();
+      $('.login-mode').show();
+    });
+
+  </script>
 </body>
 </html>
