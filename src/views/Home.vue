@@ -1,12 +1,9 @@
 <template>
-  <Header
-    head-url="https://q.qlogo.cn/g?b=qq&nk=1490476921&s=100"
-    user-name="树上屋"
-  />
+  <Header/>
 </template>
 
 <script>
-import Header from "../components/Header/index";
+import Header from "../components/Header/header";
 export default {
   name: "Home",
   components: {

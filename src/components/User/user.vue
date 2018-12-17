@@ -1,31 +1,32 @@
 <template>
-  <header>
-    <div class="user-mode">
-      <div class="user">
+  <div
+    class="user-mode"
+    @click="openOrHide"
+  >
+    <div class="user">
 
-        <div class="user--header-warp">
-          <img :src="headUrl" :alt="userName">
-        </div>
+      <div class="user--header-warp">
+        <img :src="userImg" :alt="userName">
+      </div>
 
-        <div class="user--name iconfont icon-icon-arrow-top2">
-          <span>{{ userName }}</span>
-          <ul>
-            <li class="iconfont icon-shezhi">设置</li>
-            <li class="iconfont icon-bofang">退出登录</li>
-          </ul>
-        </div>
-
-
+      <div
+        :class="['user--name', 'iconfont', 'icon-icon-arrow-top2', {'user--name__active':isActive}]"
+      >
+        <span>{{ userName }}</span>
+        <ul>
+          <li class="iconfont icon-shezhi">设置</li>
+          <li class="iconfont icon-bofang">退出登录</li>
+        </ul>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Header",
+  name: "User",
   props: {
-    headUrl: {
+    userImg: {
       type: String,
       required: true
     },
@@ -33,11 +34,28 @@ export default {
       type: String,
       required: true
     }
+  },
+  data: function() {
+    return {
+      isActive: false
+    };
+  },
+  methods: {
+    openOrHide: function() {
+      this.isActive = !this.isActive;
+      // document.addEventListener("click", ev => {
+      //   console.log(ev);
+      // });
+    }
   }
 };
 </script>
 
 <style lang="sass" scoped>
+.user-mode
+  font-family: "Segoe UI"
+  cursor: pointer
+
 .user
   display: flex
   align-items: center
@@ -83,7 +101,7 @@ export default {
   transform: translateY(-50%) rotate(-90deg)
   transition: transform 200ms, color 200ms
 
-.user--name:hover:before
+.user--name__active:before
   transform: translateY(-50%) rotate(-180deg)
   color: #ec4989
 
@@ -107,9 +125,9 @@ export default {
   cursor: pointer
 
 .user--name ul li:hover
-  /*background: linear-gradient(135deg, #EC4989 0, #FC69A2 100%)*/
   background-color: #EC4989
-.user--name:hover ul
+
+.user--name__active ul
   display: block
 
 .user--name ul li:before
