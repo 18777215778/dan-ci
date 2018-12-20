@@ -11,10 +11,14 @@ export default {
 </script>
 
 <style lang="sass">
-@import "./assets/css/iconfont.css"
+@import "assets/font/iconfont.css"
+@import "./assets/sass/main.sass"
 
 html
   font-family: "Arial", no-Serif
+
+html
+  font-size: 10px
 
 body
   position: absolute
@@ -22,6 +26,9 @@ body
   bottom: 0
   right: 0
   left: 0
+  font-size: 1.6rem
+  line-height: 1em
+  user-select: none
   overflow: hidden
 
 i
@@ -35,8 +42,7 @@ ul
 #app
   width: 100%
   height: 100%
-  background: linear-gradient(135deg, #2C2B4A 0, #211F39 100%)
+  background: linear-background(135deg, $main-light-color-1, $main-deep-color-1)
   overflow: hidden
-
 
 </style>

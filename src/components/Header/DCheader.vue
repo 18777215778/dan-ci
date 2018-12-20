@@ -1,6 +1,6 @@
 <template>
   <header>
-    <User
+    <DCUser
       :user-img="userImg"
       :user-name="userName"
     />
@@ -10,12 +10,12 @@
 <script>
 import store from "../../store/index";
 
-import User from "../User/user";
+import DCUser from "../User/DCuser";
 
 export default {
-  name: "Header",
+  name: "DCHeader",
   components: {
-    User
+    DCUser
   },
   data: function() {
     return {
@@ -31,6 +31,8 @@ export default {
 
 <style lang="sass" scoped>
 header
-  margin: 30px auto 0 auto
-  max-width: 1180px
+  display: flex
+  align-items: center
+  width: 65%
+  height: 150px
 </style>

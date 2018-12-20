@@ -1,0 +1,22 @@
+// 色值
+$tress-light-color: #FC69A2
+$tress-deep-color: #ec4989
+$main-light-color-1: #2C2B4A
+$main-deep-color-1: #211F39
+$main-light-color-2: #38375E
+$main-deep-color-2: #2C294D
+$main-light-color-3: #434170
+$main-deep-color-3: #312D53
+$transparent-black: rgba(22, 22, 33, 0.5)
+$text-color: #7A759F
+
+
+// 函数
+@function linear-background($deg, $start-color, $end-color)
+  @return linear-gradient(#{$deg}, #{$start-color} 0, #{$end-color} 100%)
+
+// mixin
+@mixin ellipsis-show()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap

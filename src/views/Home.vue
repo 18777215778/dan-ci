@@ -1,13 +1,33 @@
 <template>
-  <Header/>
+  <div class="home">
+    <DCHeader/>
+    <DCBarrageArea/>
+    <DCFooter/>
+  </div>
 </template>
 
 <script>
-import Header from "../components/Header/header";
+import DCHeader from "../components/Header/DCheader";
+import DCBarrageArea from "../components/BarrageArea/DCbarrageArea"
+import DCFooter from "../components/Footer/DCfooter"
+
 export default {
-  name: "Home",
+  name: "DCHome",
   components: {
-    Header
+    DCHeader,
+    DCBarrageArea,
+    DCFooter
   }
 };
 </script>
+
+<style lang="sass" scoped>
+.home
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  flex: 1
+  width: 100%
+  height: 100%
+
+</style>
