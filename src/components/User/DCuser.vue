@@ -105,6 +105,7 @@ export default {
 
     ul
       position: absolute
+      z-index: 5
       top: 2.9em
       margin-left: -20px
       padding: 10px 0

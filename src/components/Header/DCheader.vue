@@ -22,9 +22,6 @@ export default {
       userImg: store.state.userImg,
       userName: store.state.userName
     };
-  },
-  created: function() {
-    console.log(this.$data);
   }
 };
 </script>
@@ -34,5 +31,6 @@ header
   display: flex
   align-items: center
   width: 65%
+  min-width: 1000px
   height: 150px
 </style>

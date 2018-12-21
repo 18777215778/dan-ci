@@ -22,6 +22,7 @@ html
 
 body
   position: absolute
+  z-index: -11
   top: 0
   bottom: 0
   right: 0
@@ -40,6 +41,8 @@ ul
   list-style-type: none
 
 #app
+  position: relative
+  z-index: -10
   width: 100%
   height: 100%
   background: linear-background(135deg, $main-light-color-1, $main-deep-color-1)

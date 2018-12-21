@@ -25,6 +25,7 @@
   flex-flow: column nowrap
   justify-content: space-evenly
   width: 65%
+  min-width: 1000px
   height: 200px
 
 

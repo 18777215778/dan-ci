@@ -23,6 +23,8 @@ export default {
 
 <style lang="sass" scoped>
 .home
+  position: relative
+  z-index: -9
   display: flex
   flex-flow: column nowrap
   align-items: center
