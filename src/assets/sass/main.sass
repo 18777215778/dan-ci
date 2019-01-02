@@ -16,7 +16,16 @@ $text-color: #7A759F
   @return linear-gradient(#{$deg}, #{$start-color} 0, #{$end-color} 100%)
 
 // mixin
+// 超出范围，显示省略号
 @mixin ellipsis-show()
   overflow: hidden
   text-overflow: ellipsis
   white-space: nowrap
+
+// 铺满父元素
+@mixin overspread ()
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0

@@ -16,7 +16,10 @@
       <span class="option--icon" slot="icon">🏆</span>
       <span class="option--text" slot="text">挑战</span>
     </DCOption>
-    <button class="start-learn animated rubberBand">📖 开始学习</button>
+    <button
+      class="start-learn animated rubberBand"
+      @click="startLearn"
+    >📖 开始学习</button>
     <DCOption
       class="option"
       @openURL="openURL"
@@ -46,6 +49,9 @@
     methods: {
       openURL: function (ev) {
         console.log(ev)
+      },
+      startLearn: function () {
+        this.$vagueShade.shade('#app');
       }
     }
   }

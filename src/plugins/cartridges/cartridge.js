@@ -1,27 +1,30 @@
-import DCCartridgeTemplate from "./DCCartridgeTemplate";
+import cartridgeTemplate from "./cartridgeTemplate";
 import config from "./configurationTable";
 import tools from "../../assets/js/tools";
 
 const cartridge = {};
 cartridge.install = function (Vue) {
 
-  function send({type, content}) {
-    let DCCartridge = Vue.extend(DCCartridgeTemplate);
-    let styleAttr = _buildStyle();
+  // 把弹幕元素插入到DOM中
+  function send({type, content, vue}) {
+    let DCCartridge = Vue.extend(cartridgeTemplate);
+    let position = _randomPosition();
 
     let instance = new DCCartridge({
       propsData: {
         type,
         icon: config[type].icon,
         content,
-        styleAttr
+        position,
+        vue
       }
-    }).$mount();
+    });
 
-    document.querySelector('.barrage-area').appendChild(instance.$el);
+    document.querySelector('.barrage-area').appendChild(instance.$mount().$el);
   }
 
-  function _buildStyle() {
+  // 随机生成弹幕的位置
+  function _randomPosition() {
 
     let yAxis, duration, place;
     yAxis = tools.selectFrom(1, 100);
@@ -34,7 +37,7 @@ cartridge.install = function (Vue) {
       place = "bottom"
     }
 
-    duration = 15;
+    duration = 10;
 
     return {
       [place]: `${yAxis}%`,

@@ -1,9 +1,9 @@
 <template>
   <div
     class="cartridge"
-    :style="styleAttr"
+    :style="position"
     @click="openWin"
-    @animationEnd="toDie"
+    @animationend="toDie"
   >
     <span class="icon">{{ icon }}</span>
     <span class="content">{{ content }}</span>
@@ -11,39 +11,11 @@
 </template>
 
 <script>
+  import cartridgeMixin from "./cartridgeMixin";
+
   export default {
-    name: "DCCartridgeTemplate",
-    props: {
-      type: {
-        type: String
-      },
-      icon: {
-        type: String
-      },
-      content: {
-        type: String
-      },
-      isClickable: {
-        type: Boolean,
-        default: true
-      },
-      styleAttr: {
-        type: Object
-      }
-    },
-    methods: {
-      openWin: function () {
-        this.$emit(openWin, {
-          type: this.type,
-          icon: this.icon,
-          content: this.content,
-          isClickable: this.isClickable
-        })
-      },
-      toDie: function () {
-        console.log("动画结束！");
-      }
-    }
+    name: "cartridgeTemplate",
+    mixins: [cartridgeMixin]
   }
 </script>
 

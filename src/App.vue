@@ -21,12 +21,8 @@ html
   font-size: 10px
 
 body
-  position: absolute
+  @include overspread
   z-index: -11
-  top: 0
-  bottom: 0
-  right: 0
-  left: 0
   font-size: 1.6rem
   line-height: 1em
   user-select: none
@@ -41,11 +37,8 @@ ul
   list-style-type: none
 
 #app
-  position: relative
+  @include overspread
   z-index: -10
-  width: 100%
-  height: 100%
   background: linear-background(135deg, $main-light-color-1, $main-deep-color-1)
   overflow: hidden
-
 </style>

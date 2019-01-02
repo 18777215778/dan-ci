@@ -12,12 +12,13 @@
     name: "DCBarrageArea",
     created: function () {
       this.$nextTick(function () {
-        this.$cartridge.send({type: "1", content: "like"})
+        this.$cartridge.send({type: "1", content: "like", vue: this});
+        this.$cartridge.send({type: "2", content: "cartridge", vue: this});
       });
     },
     methods: {
-      openWin: function (options) {
-        console.log(options);
+      openWin: function (option) {
+        console.log(option);
       }
     }
   }
