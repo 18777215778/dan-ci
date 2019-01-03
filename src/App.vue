@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <router-view/>
+
+    <shade type="black"></shade>
+    <div class="frame"></div>
   </div>
 </template>
 
@@ -41,4 +44,6 @@ ul
   z-index: -10
   background: linear-background(135deg, $main-light-color-1, $main-deep-color-1)
   overflow: hidden
+
+
 </style>
