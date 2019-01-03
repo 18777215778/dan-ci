@@ -1,4 +1,3 @@
-
 export default {
   "1": {
     icon: "🦊"
@@ -15,4 +14,4 @@ export default {
   "5": {
     icon: "🐴"
   },
-}
+};

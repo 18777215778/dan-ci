@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 178.802 106">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2, .cls-4 {
+        fill: #ec4989;
+      }
+
+      .cls-3 {
+        fill: #fc69a2;
+      }
+
+      .cls-4 {
+        font-size: 40px;
+        font-family: SegoePrint, Segoe Print;
+      }
+
+      .cls-5 {
+        filter: url(#DànCi-3);
+      }
+
+      .cls-6 {
+        filter: url(#DànCi-2);
+      }
+
+      .cls-7 {
+        filter: url(#DànCi);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c294d"/>
+      <stop offset="1" stop-color="#38375e"/>
+    </linearGradient>
+    <filter id="DànCi" x="23.963" y="18" width="128" height="75" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="DànCi-2" x="14.963" y="9" width="141" height="88" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#ec4989" flood-opacity="0.6"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="DànCi-3" x="5.963" y="0" width="159" height="106" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-3"/>
+      <feFlood flood-color="#ec4989" flood-opacity="0.6"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_183" data-name="组 183" transform="translate(-569 -309)">
+    <path id="联合_3" data-name="联合 3" class="cls-1" d="M23.041,46.084A23.042,23.042,0,0,1,6.748,6.75,22.893,22.893,0,0,1,23.041,0H148.387a22.981,22.981,0,0,1,16.895,7.374H153.917a.922.922,0,1,0,0,1.843h12.905a22.85,22.85,0,0,1,4.606,13.825,23.2,23.2,0,0,1-.461,4.608H152.074a.922.922,0,0,0,0,1.843h18.439a22.984,22.984,0,0,1-7.15,11.06h-3.916a.922.922,0,1,0,0,1.843h1.447a22.963,22.963,0,0,1-12.507,3.686ZM16.59,39.633a.922.922,0,0,0,.922.922h27.65a.922.922,0,0,0,0-1.843H17.511A.922.922,0,0,0,16.59,39.633Zm116.129-11.06a.922.922,0,0,0,.922.922h14.746a.922.922,0,1,0,0-1.843H133.64A.922.922,0,0,0,132.719,28.573ZM5.53,17.513a.922.922,0,0,0,.922.922h11.06a.922.922,0,1,0,0-1.843H6.451A.922.922,0,0,0,5.53,17.513ZM99.539,8.3a.922.922,0,0,0,.922.922h3.686a.922.922,0,1,0,0-1.843h-3.686A.922.922,0,0,0,99.539,8.3Zm74.654,21.2a.922.922,0,0,1,0-1.843h3.687a.922.922,0,0,1,0,1.843ZM172.35,9.219a.922.922,0,1,1,0-1.843h1.843a.922.922,0,1,1,0,1.843Z" transform="translate(569 339.901)"/>
+    <rect id="矩形_123" data-name="矩形 123" class="cls-2" width="23.963" height="1.843" rx="0.922" transform="translate(585.59 334.373)"/>
+    <rect id="矩形_124" data-name="矩形 124" class="cls-3" width="7.373" height="1.843" rx="0.922" transform="translate(576.373 334.373)"/>
+    <rect id="矩形_129" data-name="矩形 129" class="cls-2" width="9.217" height="1.843" rx="0.922" transform="translate(705.406 389.673)"/>
+    <rect id="矩形_131" data-name="矩形 131" class="cls-3" width="18.433" height="1.843" rx="0.922" transform="translate(716.466 389.673)"/>
+    <rect id="矩形_132" data-name="矩形 132" class="cls-3" width="1.843" height="1.843" rx="0.922" transform="translate(611.396 334.373)"/>
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, 569, 309)">
+      <text id="DànCi-4" data-name="DànCi" class="cls-4" transform="translate(23.96 68)"><tspan x="0" y="0">D</tspan><tspan class="cls-3" y="0">àn</tspan><tspan y="0">C</tspan><tspan class="cls-3" y="0">i</tspan></text>
+    </g>
+    <g class="cls-6" transform="matrix(1, 0, 0, 1, 569, 309)">
+      <text id="DànCi-5" data-name="DànCi" class="cls-4" transform="translate(23.96 68)"><tspan x="0" y="0">D</tspan><tspan class="cls-3" y="0">àn</tspan><tspan y="0">C</tspan><tspan class="cls-3" y="0">i</tspan></text>
+    </g>
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, 569, 309)">
+      <text id="DànCi-6" data-name="DànCi" class="cls-4" transform="translate(23.96 68)"><tspan x="0" y="0">D</tspan><tspan class="cls-3" y="0">àn</tspan><tspan y="0">C</tspan><tspan class="cls-3" y="0">i</tspan></text>
+    </g>
+  </g>
+</svg>

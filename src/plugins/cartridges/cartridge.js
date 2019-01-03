@@ -20,12 +20,11 @@ cartridge.install = function (Vue) {
       }
     });
 
-    document.querySelector('.barrage-area').appendChild(instance.$mount().$el);
+    document.querySelector(".barrage-area").appendChild(instance.$mount().$el);
   }
 
   // 随机生成弹幕的位置
   function _randomPosition() {
-
     let yAxis, duration, place;
     yAxis = tools.selectFrom(1, 100);
 
@@ -34,15 +33,15 @@ cartridge.install = function (Vue) {
     }
     else {
       yAxis -= 50;
-      place = "bottom"
+      place = "bottom";
     }
 
-    duration = 10;
+    duration = 20;
 
     return {
       [place]: `${yAxis}%`,
       "animation-duration": `${duration}s`
-    }
+    };
   }
 
   Vue.prototype.$cartridge = {

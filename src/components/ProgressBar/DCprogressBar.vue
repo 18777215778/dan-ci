@@ -14,58 +14,58 @@
 </template>
 
 <script>
-  export default {
-    name: "DCProgressBar",
+export default {
+  name: "DCProgressBar",
 
-    props: {
-      completed: {
-        type: Number,
-        default: 1
-      },
-      sum: {
-        type: Number,
-        default: 1
-      },
-      bookName: {
-        type: String,
-        default: "先选择一本单词书"
-      }
+  props: {
+    completed: {
+      type: Number,
+      default: 1
     },
-
-    data: function () {
-      return {
-        completing: 1
-      }
+    sum: {
+      type: Number,
+      default: 1
     },
+    bookName: {
+      type: String,
+      default: "先选择一本单词书"
+    }
+  },
 
-    computed: {
-      percentage: function () {
-        let percent = (this.completing / this.sum) * 100;
-        return `${percent.toFixed(2)}%`
-      }
-    },
+  data: function () {
+    return {
+      completing: 1
+    }
+  },
 
-    created: function () {
-      this.rollingNumber(this.completed);
-    },
+  computed: {
+    percentage: function () {
+      let percent = (this.completing / this.sum) * 100;
+      return `${percent.toFixed(2)}%`
+    }
+  },
 
-    methods: {
-      rollingNumber: function (completed) {
-        let
-          that = this,
-          interval = null;
+  created: function () {
+    this.rollingNumber(this.completed);
+  },
 
-        setInterval(function () {
-          if (that.completing < completed) {
-            (that.completing += 7) > completed && (that.completing = completed)
-          }
-          else {
-            clearInterval(interval);
-          }
-        }, 5)
-      }
+  methods: {
+    rollingNumber: function (completed) {
+      let
+        that = this,
+        interval = null;
+
+      setInterval(function () {
+        if (that.completing < completed) {
+          (that.completing += 7) > completed && (that.completing = completed)
+        }
+        else {
+          clearInterval(interval);
+        }
+      }, 5)
     }
   }
+}
 </script>
 
 <style lang="sass" scoped>

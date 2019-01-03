@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <router-view/>
+    <div class="frame"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  mounted: function() {
+    this.$shade.shade("#app");
+  }
 };
 </script>
 
@@ -27,6 +31,7 @@ body
   line-height: 1em
   user-select: none
   overflow: hidden
+  background-color: #2C2B4A
 
 i
   display: inline-block
@@ -41,4 +46,6 @@ ul
   z-index: -10
   background: linear-background(135deg, $main-light-color-1, $main-deep-color-1)
   overflow: hidden
+
+
 </style>

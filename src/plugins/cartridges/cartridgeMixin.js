@@ -18,11 +18,11 @@ export default {
   },
   methods: {
     // 打开窗口
-    openWin: function () {
+    openWin: function() {
       this.$vagueShade.shade("#app");
     },
     // 移除弹幕元素
-    toDie: function () {
+    toDie: function() {
       this.$destroy();
       let el = this.$el;
       el.parentElement.removeChild(el);
